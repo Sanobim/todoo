@@ -1,8 +1,8 @@
-# Todo List Frontend
+# Todo List Backend
 
 ## Prerequisites
 - Node.js (v14 or later)
-- npm or yarn
+- MongoDB
 
 ## Setup
 1. Clone the repository
@@ -10,21 +10,24 @@
    ```
    npm install
    ```
+3. Create a `.env` file with your MongoDB URI:
+   ```
+   MONGODB_URI=mongodb://localhost:27017/todolist
+   ```
 
 ## Running the Application
-```
-npm start
-```
+- Development mode: `npm run dev`
+- Production mode: `npm start`
 
-The app will run on `http://localhost:3000`
+The server will run on `http://localhost:5000`
 
-## Features
-- Add new todos
-- Delete todos
-- Mark todos as complete/incomplete
-- Responsive design with Tailwind CSS
+## API Endpoints
+- `GET /api/todos`: Retrieve all todos
+- `POST /api/todos`: Create a new todo
+- `PUT /api/todos/:id`: Update a todo
+- `DELETE /api/todos/:id`: Delete a todo
 
-## Dependencies
-- React
-- Axios for API calls
-- Tailwind CSS for styling
+## Technologies
+- Express.js
+- Mongoose
+- MongoDB
